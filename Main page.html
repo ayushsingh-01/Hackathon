@@ -1,0 +1,826 @@
+<!DOCTYPE
+html>
+
+<html>
+
+<head>
+
+    <meta
+charset="UTF-8">
+
+    <meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Hub</title>
+
+    <style>
+
+        * {
+
+            margin:
+0;
+
+            padding:
+0;
+
+            box-sizing:
+border-box;
+
+        }
+
+
+
+
+        .container {
+
+            max-width:
+1200px;
+
+            margin:
+auto;
+
+        }
+
+
+
+
+        .navbar {
+
+            display:
+flex;
+
+            align-items:
+center;
+
+            justify-content:
+space-between;
+
+            background-color:
+#f0f0f0;
+
+            padding:
+20px;
+
+            background-image:
+url(header.jpg);
+
+            background-repeat:
+no-repeat;
+
+            background-size:
+cover;
+
+        }
+
+
+
+
+        .navbar-logo {
+
+            font-size:
+24px;
+
+            font-weight:
+bold;
+
+            color:
+#333;
+
+        }
+
+
+
+
+        .navbar-menu {
+
+            list-style:
+none;
+
+            display:
+flex;
+
+        }
+
+
+
+
+        .navbar-menu
+li {
+
+            margin:
+0
+10px;
+
+        }
+
+
+
+
+        .navbar-menu
+li
+a {
+
+            text-decoration:
+none;
+
+            color:
+#333;
+
+            padding:
+10px;
+
+        }
+
+
+
+
+        .navbar-menu
+li
+a:hover {
+
+            background-color:
+#e0e0e0;
+
+            border-radius:
+5px;
+
+        }
+
+
+
+
+        .banner {
+
+            height:
+500px;
+
+            background-size:
+cover;
+
+            background-position:
+center;
+
+            align-items:
+center;
+
+            text-align:
+center;
+
+            font-size:
+larger;
+
+            font-weight:
+bold;
+
+            font-family:Georgia,
+'Times New Roman',
+Times,
+serif;
+
+        }
+
+
+
+
+        .banner-title {
+
+            font-size:
+68px;
+
+            color:
+white;
+
+            text-shadow:
+2px
+2px
+4px
+black;
+
+            text-align:center;
+
+            margin:
+45px;
+
+            text-shadow:
+16px
+16px
+16px
+peru;
+
+            text-decoration:
+underline;
+
+            
+
+
+
+
+        }
+
+
+
+
+        .services {
+
+            padding:
+40px
+0;
+
+            color:
+aqua;
+
+        }
+
+        
+
+        .services-grid {
+
+            display:
+grid;
+
+            grid-template-columns:
+repeat(3,
+1fr);
+
+            grid-gap:
+20px;
+
+        }
+
+        .services-card:hover{
+
+            background-color:
+#e0e0e0;
+
+            box-shadow:
+9px
+9px
+9px  black;
+
+        }
+
+
+
+
+        .services-card {
+
+            border:
+1px
+solid
+#ccc;
+
+            border-radius:
+10px;
+
+            overflow:
+hidden;
+
+            color:
+black;
+
+        
+
+        }
+
+
+
+
+        .services-card-image {
+
+            height:
+300px;;
+
+            object-fit:
+cover;
+
+        }
+
+
+
+
+        .services-card-content {
+
+            padding:
+20px;
+
+        }
+
+
+
+
+        .services-card-title {
+
+            font-size:
+24px;
+
+            margin-bottom:
+10px;
+
+        }
+
+
+
+
+        .services-card-text {
+
+            font-size:
+16px;
+
+            color:
+#333;
+
+            margin-bottom:
+10px;
+
+        }
+
+
+
+
+        .services-card-link {
+
+            text-decoration:
+none;
+
+            color:
+#333;
+
+            display:
+inline-block;
+
+            padding:
+10px;
+
+            border:
+1px
+solid
+#333;
+
+            border-radius:
+5px;
+
+        }
+
+
+
+
+        .services-card-link:hover {
+
+            background-color:
+#333;  
+
+            color:
+white;
+
+        }
+
+
+
+
+        .about {
+
+            padding:
+40px
+0;
+
+            display:
+flex;
+
+            align-items:
+center;
+
+            color:
+whitesmoke;
+
+        }
+
+
+
+
+        .about-image {
+
+            width:
+50%;
+
+        }
+
+
+
+
+        .about-text {
+
+            width:
+50%;
+
+            padding:
+20px;
+
+            color:
+whitesmoke;
+
+        }
+
+
+
+
+        .about-text-small {
+
+            font-size:
+14px;
+
+            color:
+#999;
+
+            margin-bottom:
+10px;
+
+            color:
+whitesmoke;
+
+        }
+
+
+
+
+        .about-text-title {
+
+            font-size:
+36px;
+
+            color:
+#333;
+
+            margin-bottom:
+10px;
+
+            color:
+whitesmoke;
+
+        }
+
+
+
+
+        .about-text-paragraph {
+
+            font-size:
+18px;
+
+            color:
+#333;
+
+            margin-bottom:
+10px;
+
+            color:
+whitesmoke;
+
+        }
+
+
+
+
+        .about-text-button {
+
+            text-decoration:
+none;
+
+            color:
+white;
+
+            display:
+inline-block;
+
+            padding:
+10px
+20px;
+
+            background-color:
+#333;
+
+            border-radius:
+5px;
+
+        }
+
+
+
+
+        .about-text-button:hover {
+
+            background-color:
+#444;
+
+        }
+
+
+
+
+        @media (max-width:
+768px) {
+
+            .services-grid {
+
+                grid-template-columns:
+repeat(3,
+1fr);
+
+            }
+
+        }
+
+
+
+
+        @media (max-width:
+576px) {
+
+            .services-grid {
+
+                grid-template-columns:
+1fr;
+
+            }
+
+
+
+
+            .about {
+
+                flex-direction:
+column;
+
+            }
+
+
+
+
+            .about-image,
+.about-text {
+
+                width:
+100%;
+
+            }
+
+        }
+
+        body{
+
+            background-image:url(https://assets.londonist.com/uploads/2018/09/i875/the_gate.jpg);
+
+            background-repeat:
+no-repeat;
+
+            background-attachment:
+fixed;
+
+            background-size:
+cover;
+
+        }
+
+        .our-services{
+
+            text-align:
+center;
+
+            font-size:
+50px;
+
+        }
+
+        .Company{
+
+            text-align:center;
+
+            font-size:x-large;
+
+        }
+
+        .price{
+
+            text-align:
+right;
+
+            font-size:
+larger;
+
+            text-transform:
+bold;
+
+        }
+
+        .offers{
+
+           background-size:
+cover;
+
+           
+
+        }
+
+        .discount{
+
+            border:
+1px
+solid
+#ccc;
+
+            border-radius:
+5px;
+
+            padding:
+40px;
+
+            background-image:
+url();
+
+            color:whitesmoke;
+
+        }
+
+        .discount:hover{
+
+            box-shadow:
+12px
+12px
+12px
+peachpuff;
+
+            background-color:
+#ccc;
+
+        }
+
+        .sub-code{
+
+            padding:
+20px;
+
+        }
+
+        .discount1{
+
+            border:
+1px
+solid
+#ccc;
+
+            border-radius:
+5px;
+
+            padding:
+40px;
+
+            background-image:
+url();
+
+            background-size:
+cover;
+
+            color:blueviolet;
+
+        }
+
+        .discount1:hover{
+
+            box-shadow:
+12px
+12px
+12px
+palevioletred;
+
+            background-color:
+#ccc;
+
+        }
+
+        .discount2{
+
+            border:
+1px
+solid
+#ccc;
+
+            border-radius:
+5px;
+
+            padding:
+40px;
+
+            background-image:
+url();
+
+            background-size:
+cover;
+
+            color:aqua;
+
+        }
+
+        .discount2:hover{
+
+            box-shadow:
+12px
+12px
+12px
+plum;
+
+            background-color:
+#ccc;
+
+        }
+
+        mark{
+
+            background-color:
+beige;
+
+            color:
+brown;
+
+        }
+
+        .code{
+
+            background-color:
+peru;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div
+class="container">
+
+        <div
+class="navbar">
+
+            <div
+class="navbar-logo">Recipe
+ HUB</div>
+
+            <ul
+class="navbar-menu">
+
+                <li><a
+href="">Home</a></li>
+
+                <li><a
+href="">Gallery</a></li>
+
+                <li><a
+href="">About</a></li>
+
+                <li><a
+href="">Contact</a></li>
+
+                <li><a
+href=""></a></li>
+
+            </ul>
+
+        </div>
+
+        <div
+class="banner">
+
+            <div
+class="banner-title"></div>
+
+            <h3
+class="services-card-title"></h3>
+
+            <div
+class="services-grid">
+
+        <div
+class="offers">
+
+            <div
+class="discount">
+
+                VEG
+
+        <br>
+
+        <div
+class="sub-code"><mark>Dish
+ of the day</mark></div><br>
+
+    <br>
+
+        <div
+class="code"></div>
+
+        </div>
+
+        </div>
+
+        <
